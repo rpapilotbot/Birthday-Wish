@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="913,1557" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1608,1557" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
       <x:String>System.Activities</x:String>
@@ -103,7 +103,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Project get started&quot;]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;birthday bot project got started&quot;]" />
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="The workflow contains config and assets from which the values for the project were retrived ." DisplayName="Invoke config workflow" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="config.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="config">[config_dic]</OutArgument>
@@ -129,7 +129,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This sequence contains filtering the data by validating the correct mail and date format.Sending Birthday wish dynamically on the appropriate dates." DataTable="[dt_InputTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="927,2161" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="This sequence contains filtering the data by validating the correct mail and date format.Sending Birthday wish dynamically on the appropriate dates." DataTable="[dt_InputTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="334,153" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -274,51 +274,21 @@
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Filtering Birthdate workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Filtering Birthdate.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_subject">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="config_dic(&quot;subject&quot;).ToString" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:Int32" x:Key="in_Port">
-                                    <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(config_dic(&quot;port number&quot;).ToString)" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_Server">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="config_dic(&quot;server&quot;).ToString" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_userName">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="config_dic(&quot;mailcredentials&quot;).ToString" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_PassWord">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="New system.Net.NetworkCredential(string .Empty, passwordConfig_Dic(&quot;mailcredentials&quot;)).Password" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_inputData">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="config_dic(&quot;InputDataForBdayWish&quot;).ToString" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_WishTo">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(2).ToString" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_WishBody">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="String.Format(config_dic(&quot;WishBody&quot;).ToString,CurrentRow(0).ToString)" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_Name">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(0).ToString" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_filterDate">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="birthDatemmDD" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="sd:DataTable" x:Key="in_inputFilterData">
-                                    <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_InputTable" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_CompletedMailTo">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="config_dic(&quot;CompletedMailTo&quot;).ToString" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="iin_CC">
-                                    <Literal x:TypeArguments="x:String">sharongifta438@gmail.com</Literal>
-                                  </InArgument>
-                                  <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_OutputFilterData">
-                                    <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="FilteredDT" />
-                                  </OutArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_AttachFiles">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="config_dic(&quot;attachFiles&quot;).ToString" />
-                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_subject">[config_dic("subject").ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:Int32" x:Key="in_Port">[CInt(config_dic("port number").ToString)]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_Server">[config_dic("server").ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_userName">[config_dic("mailcredentials").ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_PassWord">[New system.Net.NetworkCredential(string .Empty, passwordConfig_Dic("mailcredentials")).Password]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_inputData">[config_dic("InputDataForBdayWish").ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_WishTo">[CurrentRow(2).ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_WishBody">[String.Format(config_dic("WishBody").ToString,CurrentRow(0).ToString)]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_Name">[CurrentRow(0).ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_filterDate">[birthDatemmDD]</InArgument>
+                                  <InArgument x:TypeArguments="sd:DataTable" x:Key="in_inputFilterData">[dt_InputTable]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_CompletedMailTo">[config_dic("CompletedMailTo").ToString]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="iin_CC">sharongifta438@gmail.com</InArgument>
+                                  <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_OutputFilterData">[FilteredDT]</OutArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_AttachFiles">[config_dic("attachFiles").ToString]</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                               <AddToCollection x:TypeArguments="x:String" Collection="[birthdaySentTo]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[CurrentRow(2).ToString]" />
