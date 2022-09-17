@@ -49,7 +49,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>913,2241</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1608,2241</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Filtering_Birthdate_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
@@ -146,7 +146,7 @@
             <Variable x:TypeArguments="x:String" Default="21/06/2022" Name="birthInDDmm" />
             <Variable x:TypeArguments="scg:List(x:String)" Name="list_CC">
               <Variable.Default>
-                <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="New list(Of String) From{&quot;ruban@titandata.com;ramesh@titandata.com;lakshmi@titandata.com;guru@titandata.com;ramprakash@titandata.com;ameer@titandata.com;ramya@titandata.com;ashok@titandata.com;baburaj@titandata.com;xavier@titandata.com;lydia@titandata.com;jason@titandata.com;samathananithya@gmail.com;franklinvinish98@gmail.com;lydia@titandata.com;arumugam@qfetch.us;surya@qfetch.us;sujitha@qfetch.us;esakkiammal.n@qfetch.us;moorthiraj97@gmail.com;hr@tiliconveli.com;hr@tiliconveli.com;lakshmi.u@tiliconveli.com;sankaravenie5@gmail.com;sharongiftae5@gmail.com;aartiak.e5@gmail.com;sornalakshmie5@gmail.com;prasanth9534@gmail.com;narenbagavathye5@gmail.com;sathyamoorthie5@gmail.com;naresh.kumar@e5.ai;alagappan.m@e5.ai;lalitha@tiliconveli.com;shunmugam@tiliconveli.com;balamurugantvl@gmail.com&quot;}" />
+                <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="New list(Of String) From{&quot;ruban@titandata.com;ramesh@titandata.com;lakshmi@titandata.com;guru@titandata.com;ramprakash@titandata.com;ameer@titandata.com;ramya@titandata.com;ashok@titandata.com;baburaj@titandata.com;xavier@titandata.com;lydia@titandata.com;jason@titandata.com;samathananithya@gmail.com;franklinvinish98@gmail.com;lydia@titandata.com;arumugam@qfetch.us;surya@qfetch.us;sujitha@qfetch.us;esakkiammal.n@qfetch.us;moorthiraj97@gmail.com;hr@tiliconveli.com;hr@tiliconveli.com;lakshmi.u@tiliconveli.com;sankaravenie5@gmail.com;sharongiftae5@gmail.com;aartiak.e5@gmail.com;sornalakshmie5@gmail.com;prasanth9534@gmail.com;narenbagavathye5@gmail.com;sathyamoorthie5@gmail.com;naresh.kumar@e5.ai;lalitha@tiliconveli.com;shunmugam@tiliconveli.com;balamurugantvl@gmail.com&quot;}" />
               </Variable.Default>
             </Variable>
             <Variable x:TypeArguments="x:String" Name="str_joinString" />
